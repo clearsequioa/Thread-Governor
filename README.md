@@ -20,7 +20,7 @@ Open it from **Mod Menu** (needs **Cloth Config**). Changes apply immediately, e
 The settings are also saved in `config/threadgovernor.json`. Without Mod Menu or Cloth Config the mod still works, you just edit that file instead.
 
 ## Graphics device picker (Windows)
-Lists the graphics devices found by asking the Vulkan driver (the same method VulkanMod uses), e.g. `NVIDIA GeForce 1080ti (dGPU)` and `Intel(R) UHD Graphics 730 (iGPU)`, and lets you choose **iGPU**, **dGPU**, or **let Windows decide**. This writes the same per-program setting as Windows Settings > Display > Graphics, for `javaw.exe`, so it affects every instance that uses the same Java. It only takes effect after Minecraft restarts, and a warning appears when you save a change. Windows makes the final decision, and it may not control which GPU the Vulkan backend picks, so check the "Using graphics device" line in the log.
+Lists the graphics devices found by asking the Vulkan driver (the same method VulkanMod uses), e.g. `NVIDIA GeForce GTX 1080ti (dGPU)` and `Intel(R) UHD Graphics 730 (iGPU)`, and lets you choose **iGPU**, **dGPU**, or **let Windows decide**. This writes the same per-program setting as Windows Settings > Display > Graphics, for `javaw.exe`, so it affects every instance that uses the same Java. It only takes effect after Minecraft restarts, and a warning appears when you save a change. Windows makes the final decision, and it may not control which GPU the Vulkan backend picks, so check the "Using graphics device" line in the log.
 
 ## Notes
 - **Verbose log** (on by default) writes every mode change, with the reason, and every pre-read to `latest.log`. Turn it off once you're happy.
