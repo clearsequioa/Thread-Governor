@@ -10,21 +10,8 @@ Two modules, no mixins (so it never touches anything Sodium replaces):
 2. **Region read-ahead** (singleplayer) - predicts which region files you will need from your
    movement and reads them sequentially, throttled, so they are already in the OS page cache.
 
-## Install into a project
-Easiest and safest: generate a fresh project at https://fabricmc.net/develop/template/
-(Minecraft 26.3, mod id `threadgovernor`, no split sources, no data generation), then:
-- copy `src/main/java/dev/lowcore/threadgovernor/` into it
-- replace its `src/main/resources/fabric.mod.json` with this one (or merge the entrypoint + environment)
-- delete the template's example mod class and mixin files/config references
-- `./gradlew build` -> jar in `build/libs/`
 
-The `build.gradle`, `gradle.properties` and `settings.gradle` here are my best reconstruction from the
-Fabric 26.3 notes (Loom 1.17, Gradle 9.6.0, Loader 0.19.5, Fabric API 0.161.0+26.3). The template's
-versions win if they differ. Requires Java 25.
-
-## Config: config/threadgovernor.json (created on first launch)
-After joining a world, wait ~15 s, then check `logs/latest.log` for the thread list and make sure
-`backgroundThreadPrefixes` match your real Sodium/vanilla thread names.
+   
 
 ## Notes from the first real log (Windows, Sodium 0.9.2, 26.3)
 - Sodium's builder threads are named `Chunk Render Task Executor #N`, so the default prefix is correct.
